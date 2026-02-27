@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +16,7 @@ overflow-x:hidden;
 scroll-behavior:smooth;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -40,16 +39,32 @@ animation:zoom 20s infinite alternate ease-in-out;
 
 .hero h1{
 font-family:'Playfair Display', serif;
-font-size:60px;
-letter-spacing:3px;
+font-size:55px;
 margin:10px 0;
 }
 
-.hero h2{
-font-weight:300;
+.emoji{
+font-size:40px;
 }
 
-/* SECTIONS */
+/* COUPLE IMAGE */
+.couple-img{
+margin-top:20px;
+width:180px;
+height:180px;
+border-radius:50%;
+overflow:hidden;
+border:5px solid #d4af37;
+box-shadow:0 0 25px rgba(212,175,55,0.7);
+}
+
+.couple-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* SECTION */
 section{
 min-height:100vh;
 display:flex;
@@ -72,7 +87,7 @@ animation:fadeUp 1.5s ease;
 h3{
 font-family:'Playfair Display', serif;
 color:#b68d40;
-font-size:30px;
+font-size:28px;
 margin-bottom:15px;
 }
 
@@ -124,9 +139,11 @@ to{opacity:1; transform:translateY(0);}
 
 <!-- HERO -->
 <div class="hero">
-<h2>You are invited to celebrate</h2>
-<h1>Shivani & Mohit</h1>
-<h2>Wedding Ceremony</h2>
+<div class="emoji">👰 🤵</div>
+<h1>Shivani ❤️ Mohit</h1>
+<div class="couple-img">
+<img src="https://images.unsplash.com/photo-1606800052052-a08af7148866" alt="Couple">
+</div>
 </div>
 
 <!-- EVENTS -->
@@ -134,33 +151,9 @@ to{opacity:1; transform:translateY(0);}
 <div class="glass">
 <h3>Wedding Events</h3>
 <div class="details">
-Wedding : 11<sup>th</sup> March 2026<br>
-Mehndi : 10<sup>th</sup> March 2026<br>
-Haldi : 9<sup>th</sup> March 2026
-</div>
-</div>
-</section>
-
-<!-- BRIDE -->
-<section>
-<div class="glass">
-<h3>Bride</h3>
-<div class="details">
-Shivani<br>
-Father Ram Prakash Sharma<br>
-Mother Sangeeta Sharma
-</div>
-</div>
-</section>
-
-<!-- GROOM -->
-<section>
-<div class="glass">
-<h3>Groom</h3>
-<div class="details">
-Mohit Dandotiya<br>
-Father Ram Shankar Dandotiya<br>
-Mother Kanta Devi
+💍 Wedding : 11<sup>th</sup> March 2026<br>
+🌸 Mehndi : 10<sup>th</sup> March 2026<br>
+🪔 Haldi : 9<sup>th</sup> March 2026
 </div>
 </div>
 </section>
@@ -170,19 +163,17 @@ Mother Kanta Devi
 <div class="glass">
 <h3>Venue</h3>
 <div class="details">
-Trimurti Manglik Bhavan<br>
-Trimurti Dharm Kanta ke bagal se<br>
+📍 Trimurti Manglik Bhavan<br>
 Gwalior Road, Bhind
 </div>
 
 <a href="https://wa.me/917509700167" class="whatsapp-btn">
-Confirm on WhatsApp
+Confirm on WhatsApp 💬
 </a>
 
 </div>
 </section>
 
-<!-- PETAL SCRIPT -->
 <script>
 setInterval(function(){
 var petal=document.createElement("div");
