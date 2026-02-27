@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivani ❤️ Mohit Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #3a0ca3, #7209b7);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    margin-top: 40px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+h2 { color: gold; }
+
+.section {
+    padding: 50px 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+    animation: fadeUp 1.5s ease;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.gallery img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.7);
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    color: pink;
+}
+
+@keyframes float {
+    0% {transform: translateY(0) scale(1);}
+    100% {transform: translateY(-100vh) scale(1.5);}
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes fadeUp {
+    from {opacity:0; transform: translateY(50px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+#countdown {
+    font-size: 24px;
+    color: gold;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Shivani ❤️ Mohit</h1>
+<h2>💍 Wedding Invitation 💍</h2>
+
+<div id="countdown"></div>
+
+<div class="section">
+
+<div class="card">
+<h3>Wedding</h3>
+<p>11 March 2026</p>
+</div>
+
+<div class="card">
+<h3>Haldi</h3>
+<p>09 March 2026</p>
+</div>
+
+<div class="card">
+<h3>Mehndi</h3>
+<p>10 March 2026</p>
+</div>
+
+<div class="card">
+<h3>Groom</h3>
+<p>Mohit</p>
+<p>Father: Ram Shankar Dandotiya</p>
+<p>Mother: Kanta Devi</p>
+</div>
+
+<div class="card">
+<h3>Bride</h3>
+<p>Shivani</p>
+<p>Father: Ram Prakash Sharma</p>
+<p>Mother: Sangeeta Sharma</p>
+</div>
+
+<div class="card">
+<h3>💌 RSVP</h3>
+<p>We would love your presence ❤️</p>
+<a href="https://wa.me/91XXXXXXXXXX">
+<button>Confirm on WhatsApp</button>
+</a>
+</div>
+
+<h2>📸 Wedding Gallery</h2>
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+
+</div>
+
+<!-- Background Music -->
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Countdown
+var weddingDate = new Date("March 11, 2026 00:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = weddingDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    "⏳ " + days + " Days " + hours + " Hours "
+    + minutes + " Minutes " + seconds + " Seconds ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "🎆 Wedding Day is Here! 🎆";
+    fireworks();
+  }
+}, 1000);
+
+// Floating Hearts
+setInterval(function(){
+  var heart = document.createElement("div");
+  heart.className = "heart";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.innerHTML = "❤️";
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove();},6000);
+}, 500);
+
+// Fireworks Effect
+function fireworks(){
+  alert("🎉 It's Wedding Time! 🎉");
+}
+</script>
+
+</body>
+  </html>
